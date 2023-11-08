@@ -1,0 +1,115 @@
+:root {
+  --color-toggle: #d2691e;
+  --color-item: #f2f3f5;
+  --color-link: #455b48;
+  --color-hover: #0564bd;
+}
+
+
+
+.toggle-menu {
+  width: 18.75em;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--color-toggle);
+  height: 100%;
+  overflow-y: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toggle-menu__open {
+  transform: translateX(0);
+}
+
+.toggle-menu__close {
+  transform: translateX(-320px);
+}
+
+.toggle-menu__list {
+  list-style: none;
+  padding: 0 1em;
+}
+
+.toggle-menu__link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 1em;
+  background-color: var(--color-item);
+  color: var(--color-link);
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 50px;
+
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+.icon-nav {
+  font-size: 1.25rem;
+}
+
+/* Add hover effect to the link */
+.toggle-menu__link:hover {
+  transition: background-color 0.3s;
+  background-color: var(--color-hover);
+  color: var(--color-item);
+}
+
+/* Add styles for the active link */
+.toggle-menu__active {
+  background-color: var(--color-hover);
+  color: var(--color-item);
+}
+
+.icon-text {
+  padding-left: 0.5em;
+  padding-bottom: 0.25em;
+}
+
+/* Estilos para la versión de pantalla >= 990px */
+@media screen and (min-width: 990px) {
+  .toggle-menu {
+    width: 10rem;
+    background-color: transparent;
+  }
+
+  /* Estilos para convertir el menu en un curculo */
+  .toggle-menu__link {
+    padding: 5px 18px;
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  .icon-text {
+    opacity: 0;
+    /* Establecer la opacidad del texto del icono a 0 por defecto */
+  }
+
+  .toggle-menu__link:hover .icon-text {
+    transition: opacity 0.3s;
+    opacity: 1;
+    /* Hacer que el texto del icono sea visible al pasar el cursor */
+  }
+
+  .toggle-menu__link:hover {
+    transition: width 0.15s;
+    width: 100%;
+  }
+}
+
+@media screen and (min-height: 280px) and (max-height: 376px) {
+  .toggle-menu__link {
+    padding: 0.438em;
+  }
+
+  .toggle-menu {
+    overflow-y: scroll;
+  }
+}

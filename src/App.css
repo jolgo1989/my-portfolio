@@ -1,0 +1,24 @@
+html {
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1b32;
+  color: #ffffff;
+  margin: 0;
+}
+
+.App {
+  scroll-snap-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

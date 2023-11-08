@@ -1,0 +1,143 @@
+:root {
+  --color-seection: #d2691e;
+  --h1-color: #45505b;
+  --h2-color: #728394;
+  --tittle-before: #ddd;
+  --tittle-after: #0563bb;
+}
+
+.about {
+  padding: 3.75em 0.75em;
+  background-color: var(--color-seection);
+}
+
+.about_title {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--h1-color);
+  padding-bottom: 0.7em;
+  margin: 0;
+  position: relative;
+}
+
+.about_title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 7.5rem;
+  height: 0.063rem;
+  background: var(--tittle-before);
+  bottom: 0.063em;
+  left: calc(50% - 60px);
+}
+
+.about_title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 0.188rem;
+  background: var(--tittle-after);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+/* .about_resume {
+  text-align: center;
+  margin-bottom: 2em;
+} */
+.about__content-detail {
+  text-align: left;
+
+}
+
+.about__content-role {
+  font-size: 1.75rem;
+  text-transform: capitalize;
+  color: var(--h2-color);
+}
+
+.about__content-text-bold {
+  font-weight: bold;
+  margin: 0 0.313em;
+  margin-top: 1.25em;
+  display: inline-block;
+  font-size: 1.125rem;
+}
+
+@media screen and ((min-width: 576px)) {
+  .about {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and ((min-width: 768px)) {
+  .about {
+    max-width: 720px;
+  }
+}
+
+@media screen and ((min-width: 992px)) {
+  .about {
+    max-width: 1140px;
+    /*? debes corregir esta dimención*/
+    height: 100vh;
+    padding-left: 5em;
+
+  }
+
+  .about__content {
+    display: flex;
+  }
+
+  .about__content-image {
+    width: 100%;
+    height: auto;
+    padding: 0 0.75em;
+  }
+
+
+  .about__content-info-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .bout__content-detail {
+    padding: 0 0.75em;
+    width: 112.5rem;
+  }
+
+  .about__content-role {
+    margin: 0;
+  }
+
+}
+
+@media screen and ((min-width: 1400px)) {
+  .about {
+    max-width: 1320px;
+    padding-left: 0;
+    margin-left: 11em;
+  }
+
+  .about__introduce {
+    text-align: start;
+  }
+
+
+  .about__content-info-item {
+    width: 25rem;
+  }
+
+  .about__content-image {
+    max-width: 32%;
+    height: auto;
+    padding-left: 0;
+
+  }
+}

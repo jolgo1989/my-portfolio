@@ -1,0 +1,30 @@
+.menu {
+  position: fixed;
+  top: 0.625em;
+  right: 0.625em;
+  z-index: 2;
+  background-color: transparent;
+  border-color: transparent;
+  clip-path: inset(0 0 0 0 round 0.5em);
+  cursor: pointer;
+  color: #45505b;
+  padding: 0.0625em;
+}
+
+.menu__active {
+  color: #fff;
+  background-color: #0564bd;
+}
+
+.menu__icon {
+  display: flex;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+/* Estilos para la versión de pantalla >= 768px */
+@media screen and (min-width: 990px) {
+  .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,143 @@
+:root {
+  --color-seection: #d2691e;
+  --h1-color: #45505b;
+  --h2-color: #728394;
+  --tittle-before: #ddd;
+  --sub-tittle-resume: #0563bb;
+  --sub-uppercase: uppercase
+}
+
+.resume {
+  padding: 3.75em 0.75em;
+  background-color: rgb(7, 5, 70);
+}
+
+.resume__title {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--h1-color);
+  padding-bottom: 0.7em;
+  margin: 0;
+  position: relative;
+}
+
+.resume__title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 7.5rem;
+  height: 0.063rem;
+  background: var(--tittle-before);
+  bottom: 0.063em;
+  left: calc(50% - 60px);
+}
+
+.resume__title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 0.188rem;
+  background: var(--tittle-after);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.resume__paragraph {
+  text-align: center;
+}
+
+.resume__container {
+  margin-top: 50px;
+}
+
+/*************************************! Como reutilizar esto */
+.resume__summary {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
+}
+
+.resume__summary::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
+
+.resume__summary-title {
+  color: var(--h2-color);
+}
+
+.resume__summary-name {
+  color: var(--sub-tittle-resume);
+  text-transform: var(--sub-uppercase);
+}
+
+.resume__education-title {
+  color: var(--h2-color);
+}
+
+/*********************************************! Como reutilizar esto */
+.resume__education-degree {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
+}
+
+.resume__education-degree::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
+.resume__education-degree-name {
+  color: var(--sub-tittle-resume);
+  text-transform: var(--sub-uppercase);
+}
+
+
+.resume__experience-title {
+  color: var(--h2-color);
+}
+
+.resume__experience-job {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
+}
+
+.resume__experience-job::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
+
+.resume__experience-job-name {
+  color: var(--sub-tittle-resume);
+  text-transform: var(--sub-uppercase);
+}
